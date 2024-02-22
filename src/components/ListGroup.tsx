@@ -1,13 +1,11 @@
 export const ListGroup = () => {
+    const cities = ['New York', 'San Francisco', 'Oxford', 'Deutschland']
     return (
-        <div>
+        <>
+            <h1>List Group</h1>
             <ul className="list-group">
-                <li className="list-group-item">An item</li>
-                <li className="list-group-item">A second item</li>
-                <li className="list-group-item">A third item</li>
-                <li className="list-group-item">A fourth item</li>
-                <li className="list-group-item">And a fifth one</li>
+                {cities.map((city, index) => <li key={index} className="list-group-item">{city}</li>)}
             </ul>
-        </div>
+        </>
     )
 }
