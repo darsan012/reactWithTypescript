@@ -1,19 +1,23 @@
 import './App.css';
-import { ListGroup } from './components/ListGroup';
+import Alert from './components/Alert';
+// import { ListGroup } from './components/ListGroup';
 
 function App() {
-  const items = ['New York', 'San Francisco', 'Oxford', 'Deutschland'];
-  const handleSelectedItem = (item: string) => {
-    console.log(item);
-  };
+  // const items = ['New York', 'San Francisco', 'Oxford', 'Deutschland'];
+  // const handleSelectedItem = (item: string) => {
+  //   console.log(item);
+  // };
 
   return (
     <>
-      <ListGroup
+      {/* <ListGroup
         items={items}
         heading="list"
         onSelectedItem={handleSelectedItem}
-      />
+      /> */}
+      <Alert>
+        Hello <h1>World</h1>
+      </Alert>
     </>
   );
 }
