@@ -3,6 +3,7 @@ import './App.css';
 import Alert from './components/Alert';
 import Button from './components/Button';
 import { ListGroup } from './components/ListGroup';
+import ObjectPractise from './ObjectPractise';
 
 function App() {
   const items = ['New York', 'San Francisco', 'Oxford', 'Deutschland'];
@@ -17,7 +18,7 @@ function App() {
       {/* conditional rendering for displaying alert and list */}
       {btnClick && (
         <Alert onClick={() => setBtnClick(false)}>
-          <strong>Click me</strong> to hide cities
+          <strong>Click the cross</strong> to hide cities
         </Alert>
       )}
       {btnClick && (
@@ -31,6 +32,9 @@ function App() {
       <Button onClick={() => setBtnClick(true)} color="secondary">
         Show Cities
       </Button>
+      <ObjectPractise>
+        Below is the playground for objects in react state
+      </ObjectPractise>
     </>
   );
 }
