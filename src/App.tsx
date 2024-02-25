@@ -4,9 +4,12 @@ import Alert from './components/Alert';
 import Button from './components/Button';
 import { ListGroup } from './components/ListGroup';
 import ObjectPractise from './ObjectPractise';
+import Navbar from './components/Navbar';
+import Cart from './components/Cart';
 
 function App() {
   const items = ['New York', 'San Francisco', 'Oxford', 'Deutschland'];
+  const [cartItems, setCartItems] = useState(['Tv', 'Cable', 'Keyboard']);
   const handleSelectedItem = (item: string) => {
     console.log(item);
   };
@@ -35,6 +38,11 @@ function App() {
       <ObjectPractise>
         Below is the playground for objects in react state
       </ObjectPractise>
+
+      <hr />
+      <div>Sharing states between navbar and cart components</div>
+      <Navbar cartItemsCount={cartItems.length} />
+      <Cart cartItems={cartItems} onClear={() => setCartItems([])} />
     </>
   );
 }
