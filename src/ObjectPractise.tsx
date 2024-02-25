@@ -31,7 +31,6 @@ const ObjectPractise = ({ children }: Props) => {
       <p>{children}</p>
       <strong>{drink.price}</strong>
       {tags.map((items, index) => {
-        console.log(items);
         <p>Hello world</p>;
         <p key={index}>{items[index]}</p>;
       })}
