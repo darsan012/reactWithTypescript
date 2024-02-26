@@ -1,36 +1,31 @@
-import { FormEvent, useRef } from 'react';
+import { useForm } from 'react-hook-form';
 
 const Form = () => {
-  // use of useRef hook for storing values
-  // you can use useState hook but it is not optimal solution
-  const nameRef = useRef<HTMLInputElement>(null);
-  const ageRef = useRef<HTMLInputElement>(null);
+  const { register, handleSubmit } = useForm();
 
-  // store the values of the input element into object
-  const person = {
-    name: '',
-    age: 0,
-  };
-
-  const handleSubmit = (event: FormEvent) => {
-    event.preventDefault(); // prevents from reloading the page
-    if (nameRef.current !== null) person.name = nameRef.current.value;
-    if (ageRef.current !== null) person.age = parseInt(ageRef.current.value);
-    console.log(person);
-  };
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit((data) => console.log(data))}>
       <div className="mb-3">
         <label htmlFor="name" className="form-label">
           Name
         </label>
-        <input ref={nameRef} id="name" type="text" className="form-control" />
+        <input
+          {...register('name')}
+          id="name"
+          type="text"
+          className="form-control"
+        />
       </div>
       <div className="mb-3">
         <label htmlFor="age" className="form-label">
           Age
         </label>
-        <input ref={ageRef} id="age" type="number" className="form-control" />
+        <input
+          {...register('age')}
+          id="age"
+          type="number"
+          className="form-control"
+        />
       </div>
       <button className="btn btn-primary" type="submit">
         Submit
