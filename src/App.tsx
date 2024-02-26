@@ -8,6 +8,7 @@ import ObjectPractise from './ObjectPractise';
 import Navbar from './components/Navbar';
 import Cart from './components/Cart';
 import ExpandableText from './components/ExpandableText';
+import Form from './components/Form';
 
 function App() {
   const items = ['New York', 'San Francisco', 'Oxford', 'Deutschland'];
@@ -60,6 +61,9 @@ function App() {
         generated Lorem Ipsum is therefore always free from repetition, injected
         humour, or non-characteristic words etc.
       </ExpandableText>
+      <hr />
+      <h1>Playing with form element</h1>
+      <Form />
     </>
   );
 }
