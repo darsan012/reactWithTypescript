@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+import './index.css';
 import Alert from './components/Alert';
 import Button from './components/Button';
 import { ListGroup } from './components/ListGroup';
