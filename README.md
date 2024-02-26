@@ -1,20 +1,21 @@
 # React + TypeScript + Vite + Bootstrap
 
-This project is created by using vite v5.1.4. 
+This project is created by using vite v5.1.4.
 This app is the playground to get started with React, vite, typescript and bootstrap.
 
-## To install the package 
+## To install the package
+
 ```bash
   npm install
 ```
 
 ## To run the project
+
 ```bash
   npm run dev
 ```
 
 It will show the url link for the project, simply copy it and run it on the browser.
-
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
@@ -38,9 +39,13 @@ export default {
     project: ['./tsconfig.json', './tsconfig.node.json'],
     tsconfigRootDir: __dirname,
   },
-}
+};
 ```
 
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+- ```javascript
+  div.mb - 3 > label.form - label + input.form - control;
+  ```
